@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import RTNCenteredText from 'rtn-centered-text/js/RTNCenteredTextNativeComponent';
 
 const App = () => {
@@ -14,9 +14,8 @@ const App = () => {
           backgroundColor: 'pink',
           alignItems: 'center',
           zIndex: 12,
-        }}>
-        <Text>JSON</Text>
-      </RTNCenteredText>
+        }}
+      />
     </SafeAreaView>
   );
 };

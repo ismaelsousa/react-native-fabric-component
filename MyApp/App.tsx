@@ -5,13 +5,11 @@ import RTNCenteredText from 'rtn-centered-text/js/RTNCenteredTextNativeComponent
 
 const App = () => {
   return (
-    <SafeAreaView
-      style={{flex: 1, alignContent: 'center', justifyContent: 'center'}}>
+    <SafeAreaView style={{flex: 1}}>
       <RTNCenteredText
         text="Hello World!"
         style={{
           flex: 1,
-          backgroundColor: 'pink',
           alignItems: 'center',
           zIndex: 12,
         }}

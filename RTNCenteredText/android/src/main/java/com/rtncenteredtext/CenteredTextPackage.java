@@ -8,11 +8,11 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.Collections;
 import java.util.List;
 
-public class RTNCenteredTextPackage implements ReactPackage {
+public class CenteredTextPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-       return Collections.singletonList(new RTNCenteredTextManager(reactContext));
+       return Collections.singletonList(new CenteredTextManager(reactContext));
     }
 
     @Override

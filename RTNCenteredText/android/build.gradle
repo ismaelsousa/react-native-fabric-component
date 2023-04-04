@@ -7,7 +7,7 @@ buildscript {
     gradlePluginPortal()
   }
   dependencies {
-    classpath("com.android.tools.build:gradle:7.1.1")
+    classpath("com.android.tools.build:gradle:7.3.1")
   }
 }
 
@@ -15,24 +15,21 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.facebook.react'
 
 android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 31)
+  compileSdkVersion safeExtGet('compileSdkVersion', 33)
+  namespace "com.rtncenteredtext"
 
   defaultConfig {
     minSdkVersion safeExtGet('minSdkVersion', 21)
-    targetSdkVersion safeExtGet('targetSdkVersion', 31)
+    targetSdkVersion safeExtGet('targetSdkVersion', 33)
     buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", "true")
   }
 }
 
 repositories {
-  maven {
-    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-    url "$projectDir/../node_modules/react-native/android"
-  }
   mavenCentral()
   google()
 }
 
 dependencies {
-  implementation 'com.facebook.react:react-native:+'
+  implementation 'com.facebook.react:react-native'
 }

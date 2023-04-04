@@ -1,27 +1,26 @@
 package com.rtncenteredtext;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatTextView;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.graphics.Color;
 
 import android.view.Gravity;
+import androidx.appcompat.widget.AppCompatTextView;
 
-public class RTNCenteredText extends AppCompatTextView {
+public class CenteredText extends AppCompatTextView {
 
-    public RTNCenteredText(Context context) {
+    public CenteredText(Context context) {
         super(context);
         this.configureComponent();
     }
 
-    public RTNCenteredText(Context context, @Nullable AttributeSet attrs) {
+    public CenteredText(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         this.configureComponent();
     }
 
-    public RTNCenteredText(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CenteredText(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.configureComponent();
     }

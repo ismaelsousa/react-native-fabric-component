@@ -3,7 +3,6 @@ package com.rtncenteredtext;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.uimanager.SimpleViewManager;
@@ -13,40 +12,39 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.viewmanagers.RTNCenteredTextManagerInterface;
 import com.facebook.react.viewmanagers.RTNCenteredTextManagerDelegate;
 
+@ReactModule(name = CenteredTextManager.NAME)
+public class CenteredTextManager extends SimpleViewManager<CenteredText>
+        implements RTNCenteredTextManagerInterface<CenteredText> {
 
-@ReactModule(name = RTNCenteredTextManager.NAME)
-public class RTNCenteredTextManager extends SimpleViewManager<RTNCenteredText>
-        implements RTNCenteredTextManagerInterface<RTNCenteredText> {
-
-    private final ViewManagerDelegate<RTNCenteredText> mDelegate;
+    private final ViewManagerDelegate<CenteredText> mDelegate;
 
     static final String NAME = "RTNCenteredText";
 
-    public RTNCenteredTextManager(ReactApplicationContext context) {
+    public CenteredTextManager(ReactApplicationContext context) {
         mDelegate = new RTNCenteredTextManagerDelegate<>(this);
     }
 
     @Nullable
     @Override
-    protected ViewManagerDelegate<RTNCenteredText> getDelegate() {
+    protected ViewManagerDelegate<CenteredText> getDelegate() {
         return mDelegate;
     }
 
     @NonNull
     @Override
     public String getName() {
-        return RTNCenteredTextManager.NAME;
+        return CenteredTextManager.NAME;
     }
 
     @NonNull
     @Override
-    protected RTNCenteredText createViewInstance(@NonNull ThemedReactContext context) {
-        return new RTNCenteredText(context);
+    protected CenteredText createViewInstance(@NonNull ThemedReactContext context) {
+        return new CenteredText(context);
     }
 
     @Override
     @ReactProp(name = "text")
-    public void setText(RTNCenteredText view, @Nullable String text) {
+    public void setText(CenteredText view, @Nullable String text) {
         view.setText(text);
     }
 }

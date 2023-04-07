@@ -33,7 +33,7 @@
     "react-native": "*"
   },
   "codegenConfig": {
-    "name": "RTNCenteredTextSpecs",
+    "name": "RTNCenteredText",
     "type": "components",
     "jsSrcsDir": "js"
   }
